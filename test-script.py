@@ -10,7 +10,7 @@ import re
 #-----------------------------------------
 def send_request(page):
     headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.103 Safari/537.36'}
-    url = "http://api.viki.io/v4/videos.json?app=100250a&per_page=10&page=1"
+    url = "http://api.viki.io/v4/videos.json?app=100250a&per_page=10&page=%s" %(page)
     response = requests.get(url, headers=headers)
     status = response.status_code
 	
